@@ -114,7 +114,7 @@ class Line extends Shape
   Position start, end;
   Line(Position s, Position e)
   {
-    start = s;
+      start = s;
     end = e;
     type = "Line";
   }

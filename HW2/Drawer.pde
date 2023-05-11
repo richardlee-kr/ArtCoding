@@ -14,7 +14,7 @@ class Drawer
   ArrayList<Shape> UI = new ArrayList<Shape>();
   Shape shapeToDraw;
   
-  Rect r;
+  Rect r;b
   Ellipse e;
   Line l;
   VertexShape v;

@@ -7,7 +7,7 @@ int i=0;
 boolean FPS = true;
 
 void setup() {
-  size(600, 400, P3D);
+  size(1200, 800, P3D);
   frameRate(60);
 }
 void draw()
@@ -37,6 +37,8 @@ void UserInput()
 {
   if(keyPressed)
   {
+    if (key == 'f')
+      FPS = !FPS;
     if(FPS)
     {
       if(key == 'w')
@@ -50,8 +52,6 @@ void UserInput()
     }
     else
     {
-      if (key == 'f')
-        FPS = !FPS;
       if (key == 'a')
         rotX += 5;
       if (key == 'd')

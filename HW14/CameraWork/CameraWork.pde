@@ -20,7 +20,7 @@ void draw()
     ty = 200*sin(radians(rotZ));
     tz = 0;
     axis();
-    camera(0, 0, 0, tx, ty, tz, 0, 0, 1);
+    camera(cx, 0, cz, tx, ty, tz, 0, 0, 1);
   }
   else
   {
@@ -37,14 +37,27 @@ void UserInput()
 {
   if(keyPressed)
   {
-    if (key == 'f')
-      FPS = !FPS;
-    if (key == 'a')
-      rotX += 5;
-    if (key == 'd')
-      rotX -= 5;
+    if(FPS)
+    {
+      if(key == 'w')
+        cz -= 5;
+      if(key == 's')
+        cz += 5;
+      if(key == 'a')
+        cx -= 5;
+      if(key == 'd')
+        cx += 5;
+    }
+    else
+    {
+      if (key == 'f')
+        FPS = !FPS;
+      if (key == 'a')
+        rotX += 5;
+      if (key == 'd')
+        rotX -= 5; 
+    }
   }
-
 }
 void mouseDragged()
 {
